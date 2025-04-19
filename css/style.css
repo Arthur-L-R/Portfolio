@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fefbd8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* MENU */
+header {
+    background-color: #f5e942;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+nav .menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: #d00000;
+}
+
+/* SUBMENU */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #fff8b2;
+    border: 1px solid #e6d500;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+}
+
+.submenu li {
+    margin: 0.5rem 0;
+}
+
+.com-submenu:hover .submenu {
+    display: flex;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    padding: 2rem;
+}
+
+section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #f5e942;
+}
+
+/* ANIMAÇÃO */
+#tv-video-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+#tv-video-transition.ativa {
+    opacity: 1;
+}
